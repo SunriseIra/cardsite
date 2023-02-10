@@ -1,0 +1,328 @@
+body {
+  background-color: rgb(35, 171, 250);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.card_plhold_all_all {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card_plhold {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card_plhold_inner {
+  width: 25%;
+  padding: 20px;
+  margin: 10px;
+  background-color: gold;
+}
+
+.card_plhold_title {
+  color: rgb(11, 4, 95);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card_plhold_title {
+  height: 100px;
+}
+.row_postbtn {
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS */
+.postbtn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  font-family: Eina01, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 20px;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  width: auto;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .postbtn {
+    padding: 19px 32px;
+  }
+}
+
+.postbtn:before,
+.postbtn:after {
+  border-radius: 80px;
+}
+
+.postbtn:before {
+  background-color: rgba(249, 57, 19, 0.562);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.postbtn:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ffd726 0, #f9a813 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.postbtn:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.postbtn:active:not(:disabled) {
+  color: #ccc;
+}
+
+.postbtn:active:not(:disabled):after {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #fffb26 0, #f9a813 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.postbtn:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+/* CSS */
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f1f0f5;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #070b44ec;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+/* popup */
+.popup {
+  z-index: 90;
+  position: fixed;
+  background-color: rgba(65, 148, 230, 0.87);
+  transition: all 0.8s ease 0s;
+  height: 1px;
+  color: #1c055e;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease 0.5s, height 0.5s ease;
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.popup_content {
+  position: relative;
+  max-width: 50%;
+  padding: 3%;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: italic;
+  /* text-transform: uppercase; */
+  background-color: #f1c40f;
+  color: #1c055e;
+  text-align: center;
+  z-index: 100;
+}
+.popup_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup.active.popup_content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+.popup_card {
+  cursor: pointer;
+}
+.popup_card:focus {
+  outline: none;
+}
+.popup_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 40px;
+  color: #1c055e;
+  margin: 0;
+  transition: all 0ms;
+  cursor: pointer;
+  z-index: 110;
+}
+.popup_close:hover {
+  color: #fff;
+}
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  transition: width 0.5s ease, height 0.5s ease 0.5s;
+}
+/* .active {
+  display: block;
+} */
+
+.content {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate3d(0, -50%, 0);
+  transition: color 0.5s ease;
+  width: 100%;
+  z-index: 110;
+}
+.button-86 {
+  color: rgb(238, 241, 245);
+  cursor: pointer;
+
+  text-transform: uppercase;
+  transition: color 0.5s ease 0.5s;
+}
+
+/* popup  ended*/
+
+/*  */
+.cart {
+  z-index: 90;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background-color: #ffffffa6;
+  top: 0;
+  left: 0;
+  transition: all 0.8s ease 0s;
+  backdrop-filter: blue(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+}
+
+.popup_card_inn {
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  font-weight:600;
+}
+.popup_card_body {
+  font-size: 24px;
+}
