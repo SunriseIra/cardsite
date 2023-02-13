@@ -11,7 +11,7 @@ postbtn.addEventListener("click", function () {
     .then((response) => response.json())
     .then(function (data) {
       // console.log(data);
-      // console.log(data);
+     
 
       for (let i = 0; i < 10; i++) {
         card_plhold.innerHTML += `

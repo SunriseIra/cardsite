@@ -72,11 +72,11 @@ body {
   z-index: 0;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .postbtn {
     padding: 19px 32px;
   }
-}
+} */
 
 .postbtn:before,
 .postbtn:after {
